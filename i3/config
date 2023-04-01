@@ -1,0 +1,256 @@
+# ██╗██████╗      ██████╗ ██████╗ ███╗   ██╗███████╗██╗ ██████╗     ██████╗ ██╗   ██╗    ██╗    ██╗ █████╗ ███████╗██╗  ██╗
+# ██║╚════██╗    ██╔════╝██╔═══██╗████╗  ██║██╔════╝██║██╔════╝     ██╔══██╗╚██╗ ██╔╝    ██║    ██║██╔══██╗██╔════╝██║  ██║
+# ██║ █████╔╝    ██║     ██║   ██║██╔██╗ ██║█████╗  ██║██║  ███╗    ██████╔╝ ╚████╔╝     ██║ █╗ ██║███████║███████╗███████║
+# ██║ ╚═══██╗    ██║     ██║   ██║██║╚██╗██║██╔══╝  ██║██║   ██║    ██╔══██╗  ╚██╔╝      ██║███╗██║██╔══██║╚════██║██╔══██║
+# ██║██████╔╝    ╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝    ██████╔╝   ██║       ╚███╔███╔╝██║  ██║███████║██║  ██║
+# ╚═╝╚═════╝      ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝     ╚═════╝    ╚═╝        ╚══╝╚══╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+
+# ┃ ┃┏━┛┃ ┃  ┏┏ ┏━┃┏━┛━┏┛┏━┛┏━┃
+# ┏┛ ┏━┛━┏┛  ┃┃┃┏━┃━━┃ ┃ ┏━┛┏┏┛
+# ┛ ┛━━┛ ┛   ┛┛┛┛ ┛━━┛ ┛ ━━┛┛ ┛
+
+set $mod Mod4
+new_window pixel 0
+
+# ┏━┛┏━┃┏━ ━┏┛┏━┛
+# ┏━┛┃ ┃┃ ┃ ┃ ━━┃
+# ┛  ━━┛┛ ┛ ┛ ━━┛
+
+font pango:Fira Code NerdFont 7
+font pango:Fira Code NerdFont 7
+
+# ┏━┛┏━┃┏━ ━┏┛┏━┃┏━┃┃  ┏━┛
+# ┃  ┃ ┃┃ ┃ ┃ ┏┏┛┃ ┃┃  ━━┃
+# ━━┛━━┛┛ ┛ ┛ ┛ ┛━━┛━━┛━━┛
+
+# 𝐬𝐮𝐬𝐩𝐞𝐧𝐝 𝐚𝐧𝐝 𝐛𝐥𝐨𝐜𝐤 𝐬𝐲𝐬𝐭𝐞𝐦
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+
+# 𝐏𝐮𝐭 𝐭𝐡𝐞 𝐰𝐢𝐟𝐢 𝐦𝐞𝐧𝐮 𝐢𝐧 𝐭𝐡𝐞 𝐢𝟑 𝐬𝐲𝐬𝐭𝐚𝐲
+# exec --no-startup-id nm-applet
+
+# 𝐌𝐢𝐜𝐫𝐨𝐩𝐡𝐨𝐧𝐞 𝐚𝐧𝐝 𝐁𝐫𝐢𝐠𝐡𝐭𝐧𝐞𝐬𝐬 𝐂𝐨𝐧𝐭𝐫𝐨𝐥𝐬
+set $refresh_i3blocks killall -SIGUSR1 i3blocks
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3blocks
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3blocks
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3blocks
+bindsym $mod+F10 exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3blocks
+bindsym $mod+F12 exec pactl set-source-volume @DEFAULT_SOURCE@ +10% && $refresh_i3blocks
+bindsym $mod+F11 exec pactl set-source-volume @DEFAULT_SOURCE@ -10% && $refresh_i3blocks
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+
+# 𝐅𝐥𝐨𝐚𝐭𝐢𝐧𝐠 𝐩𝐨𝐬𝐢𝐭𝐢𝐨𝐧
+floating_modifier $mod
+
+# 𝐒𝐭𝐚𝐫𝐭 𝐭𝐡𝐞 𝐓𝐞𝐫𝐦𝐢𝐧𝐚𝐥 𝐄𝐦𝐮𝐥𝐚𝐭𝐨𝐫
+bindsym $mod+Return exec kitty -1
+
+# 𝐂𝐥𝐨𝐬𝐞 𝐚 𝐰𝐢𝐧𝐝𝐨𝐰
+bindsym $mod+q kill
+
+# 𝐎𝐩𝐞𝐧 𝐭𝐡𝐞 𝐝𝐦𝐞𝐧𝐮 -> 𝐨𝐥𝐝 𝐦𝐨𝐝𝐢𝐟𝐢𝐜𝐚𝐭𝐢𝐨𝐧 𝐝𝐦𝐞𝐧𝐮_𝐫𝐮𝐧
+bindsym $mod+d exec --no-startup-id ~/Dev/rofi/files/launchers/type-1/launcher.sh
+bindsym $mod+f exec --no-startup-id ~/Dev/rofi/files/powermenu/type-6/powermenu.sh
+bindsym $mod+Tab exec --no-startup-id rofi -show window
+
+# 𝐎𝐩𝐞𝐧 𝐧𝐞𝐨𝐯𝐢𝐝𝐞
+bindsym $mod+t exec --no-startup-id /usr/bin/neovide
+
+# 𝐂𝐡𝐚𝐧𝐠𝐞 𝐤𝐞𝐲𝐛𝐨𝐚𝐫𝐝 𝐥𝐚𝐲𝐨𝐮𝐭
+bindsym $mod+a exec (setxkbmap -model abnt2 -layout br -variant abnt2)
+bindsym $mod+u exec (setxkbmap us)
+
+
+# 𝐢𝟑𝐥𝐨𝐜𝐤
+bindsym $mod+g exec i3lock-fancy --nofork
+
+# 𝐏𝐫𝐢𝐧𝐭𝐬𝐜𝐫𝐞𝐞𝐧
+bindsym $mod+o exec gnome-screenshot
+
+# 𝐂𝐡𝐚𝐧𝐠𝐞 𝐰𝐢𝐧𝐝𝐨𝐰 𝐟𝐨𝐜𝐮𝐬
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+semicolon focus right
+
+# 𝐚𝐥𝐭𝐞𝐫𝐧𝐚𝐭𝐢𝐯𝐞𝐥𝐲, 𝐲𝐨𝐮 𝐜𝐚𝐧 𝐮𝐬𝐞 𝐭𝐡𝐞 𝐜𝐮𝐫𝐬𝐨𝐫 𝐤𝐞𝐲𝐬:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# 𝐦𝐨𝐯𝐞 𝐟𝐨𝐜𝐮𝐬𝐞𝐝 𝐰𝐢𝐧𝐝𝐨𝐰
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# 𝐚𝐥𝐭𝐞𝐫𝐧𝐚𝐭𝐢𝐯𝐞𝐥𝐲, 𝐲𝐨𝐮 𝐜𝐚𝐧 𝐮𝐬𝐞 𝐭𝐡𝐞 𝐜𝐮𝐫𝐬𝐨𝐫 𝐤𝐞𝐲𝐬:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# 𝐬𝐩𝐥𝐢𝐭 𝐢𝐧 𝐡𝐨𝐫𝐢𝐳𝐨𝐧𝐭𝐚𝐥 𝐨𝐫𝐢𝐞𝐧𝐭𝐚𝐭𝐢𝐨𝐧
+bindsym $mod+h split h
+
+# 𝐬𝐩𝐥𝐢𝐭 𝐢𝐧 𝐯𝐞𝐫𝐭𝐢𝐜𝐚𝐥 𝐨𝐫𝐢𝐞𝐧𝐭𝐚𝐭𝐢𝐨𝐧
+bindsym $mod+v split v
+
+# 𝐞𝐧𝐭𝐞𝐫 𝐟𝐮𝐥𝐥𝐬𝐜𝐫𝐞𝐞𝐧 𝐦𝐨𝐝𝐞 𝐟𝐨𝐫 𝐭𝐡𝐞 𝐟𝐨𝐜𝐮𝐬𝐞𝐝 𝐜𝐨𝐧𝐭𝐚𝐢𝐧𝐞𝐫
+bindsym $mod+Shift+f fullscreen toggle
+
+# 𝐭𝐨𝐠𝐠𝐥𝐞 𝐭𝐢𝐥𝐢𝐧𝐠 / 𝐟𝐥𝐨𝐚𝐭𝐢𝐧𝐠
+bindsym $mod+Shift+space floating toggle
+
+# 𝐜𝐡𝐚𝐧𝐠𝐞 𝐟𝐨𝐜𝐮𝐬 𝐛𝐞𝐭𝐰𝐞𝐞𝐧 𝐭𝐢𝐥𝐢𝐧𝐠 / 𝐟𝐥𝐨𝐚𝐭𝐢𝐧𝐠 𝐰𝐢𝐧𝐝𝐨𝐰𝐬
+bindsym $mod+space focus mode_toggle
+
+# 𝐟𝐨𝐜𝐮𝐬 𝐭𝐡𝐞 𝐜𝐡𝐢𝐥𝐝 𝐜𝐨𝐧𝐭𝐚𝐢𝐧𝐞𝐫
+# 𝐛𝐢𝐧𝐝𝐬𝐲𝐦 $𝐦𝐨𝐝+𝐝 𝐟𝐨𝐜𝐮𝐬 𝐜𝐡𝐢𝐥𝐝
+# 𝐃𝐞𝐟𝐢𝐧𝐞 𝐧𝐚𝐦𝐞𝐬 𝐟𝐨𝐫 𝐝𝐞𝐟𝐚𝐮𝐥𝐭 𝐰𝐨𝐫𝐤𝐬𝐩𝐚𝐜𝐞𝐬 𝐟𝐨𝐫 𝐰𝐡𝐢𝐜𝐡 𝐰𝐞 𝐜𝐨𝐧𝐟𝐢𝐠𝐮𝐫𝐞 𝐤𝐞𝐲 𝐛𝐢𝐧𝐝𝐢𝐧𝐠𝐬 𝐥𝐚𝐭𝐞𝐫 𝐨𝐧.
+# 𝐖𝐞 𝐮𝐬𝐞 𝐯𝐚𝐫𝐢𝐚𝐛𝐥𝐞𝐬 𝐭𝐨 𝐚𝐯𝐨𝐢𝐝 𝐫𝐞𝐩𝐞𝐚𝐭𝐢𝐧𝐠 𝐭𝐡𝐞 𝐧𝐚𝐦𝐞𝐬 𝐢𝐧 𝐦𝐮𝐥𝐭𝐢𝐩𝐥𝐞 𝐩𝐥𝐚𝐜𝐞𝐬.
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+# 𝐬𝐰𝐢𝐭𝐜𝐡 𝐭𝐨 𝐰𝐨𝐫𝐤𝐬𝐩𝐚𝐜𝐞
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+# 𝐦𝐨𝐯𝐞 𝐟𝐨𝐜𝐮𝐬𝐞𝐝 𝐜𝐨𝐧𝐭𝐚𝐢𝐧𝐞𝐫 𝐭𝐨 𝐰𝐨𝐫𝐤𝐬𝐩𝐚𝐜𝐞
+bindsym $mod+F1 move container to workspace number $ws1
+bindsym $mod+F2 move container to workspace number $ws2
+bindsym $mod+F3 move container to workspace number $ws3
+bindsym $mod+F4 move container to workspace number $ws4
+bindsym $mod+F5 move container to workspace number $ws5
+bindsym $mod+F6 move container to workspace number $ws6
+bindsym $mod+F7 move container to workspace number $ws7
+bindsym $mod+F8 move container to workspace number $ws8
+bindsym $mod+F9 move container to workspace number $ws9
+bindsym $mod+F0 move container to workspace number $ws10
+
+# ┏━┛┛┃  ┏━┛  ┏━┛┏━┃┏━ ━┏┛┏━┃┏━┃┃  ┏━┛
+# ┏━┛┃┃  ┏━┛  ┃  ┃ ┃┃ ┃ ┃ ┏┏┛┃ ┃┃  ━━┃
+# ┛  ┛━━┛━━┛  ━━┛━━┛┛ ┛ ┛ ┛ ┛━━┛━━┛━━┛
+
+# 𝐑𝐞𝐥𝐨𝐚𝐝 𝐭𝐡𝐞 𝐜𝐨𝐧𝐟𝐢𝐠𝐮𝐫𝐚𝐭𝐢𝐨𝐧 𝐟𝐢𝐥𝐞
+bindsym $mod+Shift+c reload
+
+# 𝐑𝐞𝐥𝐨𝐚𝐝 𝐈𝟑𝐰𝐦 𝐚𝐟𝐭𝐞𝐫 𝐦𝐨𝐝𝐢𝐟𝐲𝐢𝐧𝐠 𝐭𝐡𝐞 𝐜𝐨𝐧𝐟𝐢𝐠𝐮𝐫𝐚𝐭𝐢𝐨𝐧 𝐟𝐢𝐥𝐞
+bindsym $mod+Shift+r restart
+
+# 𝐄𝐧𝐝 𝐭𝐡𝐞 𝐢𝟑 𝐬𝐞𝐬𝐬𝐢𝐨𝐧
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Quer terminar a sessão?' -B 'Sim' 'i3-msg exit'"
+
+# 𝐫𝐞𝐬𝐢𝐳𝐞 𝐰𝐢𝐧𝐝𝐨𝐰 (𝐲𝐨𝐮 𝐜𝐚𝐧 𝐚𝐥𝐬𝐨 𝐮𝐬𝐞 𝐭𝐡𝐞 𝐦𝐨𝐮𝐬𝐞 𝐟𝐨𝐫 𝐭𝐡𝐚𝐭)
+mode "resize" {
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
+
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+# ┏━ ┏━┃┏━┃┏━┛
+# ┏━┃┏━┃┏┏┛━━┃
+# ━━ ┛ ┛┛ ┛━━┛
+
+# bar {
+#         font pango: FontAwesome 7
+#         position top
+#         status_command i3blocks
+
+
+# ┏━┛┃ ┃┏━┛━┏┛┏━┃┏┏ ┏━┛
+# ┃  ┃ ┃━━┃ ┃ ┃ ┃┃┃┃━━┃
+# ━━┛━━┛━━┛ ┛ ━━┛┛┛┛━━┛
+
+# 𝐂𝐡𝐚𝐧𝐠𝐞𝐬 𝐢𝟑 𝐛𝐚𝐫 𝐜𝐨𝐥𝐨𝐫𝐬
+
+#     colors {
+#          background #12131b
+#          statusline #fff
+#          separator #ccc
+
+#          focused_workspace  #ccc #ccc #000000
+#          active_workspace   #ccc #ccc #000000
+#          inactive_workspace #111118 #111118 #FFFFFF
+#          urgent_workspace   #C10004 #900000 #FFFFFF
+#          }
+# }
+
+# ┏━ ┏━┃┏━┃┏━ ┏━┛┏━┃┏━┛
+# ┏━┃┃ ┃┏┏┛┃ ┃┏━┛┏┏┛━━┃
+# ━━ ━━┛┛ ┛━━ ━━┛┛ ┛━━┛
+
+# for_window [class="^.*"] border pixel 2 round
+# new_window pixel 2
+
+# # Cor da borda
+# client.focused          #FFFFFF #FFFFFF #FFFFFF #FFFFFF
+# client.unfocused        #FFFFFF #FFFFFF #FFFFFF #FFFFFF
+# client.urgent           #FFFFFF #FFFFFF #FFFFFF #FFFFFF
+
+# ┏━┛┏━┃┏━┃┏━┛
+# ┃ ┃┏━┃┏━┛━━┃
+# ━━┛┛ ┛┛  ━━┛
+
+gaps inner 8
+gaps outer 4
+
+# ┏━┛━┏┛┏━┃┏━┃━┏┛
+# ━━┃ ┃ ┏━┃┏┏┛ ┃
+# ━━┛ ┛ ┛ ┛┛ ┛ ┛
+
+# 𝐩𝐫𝐨𝐠𝐫𝐚𝐦𝐬 𝐭𝐡𝐚𝐭 𝐰𝐢𝐥𝐥 𝐬𝐭𝐚𝐫𝐭 𝐭𝐨𝐠𝐞𝐭𝐡𝐞𝐫 𝐰𝐢𝐭𝐡 𝐢𝟑𝐰𝐦
+
+exec dbus-run-session -- i3
+exec --no-startup-id picom &
+exec --no-startup-id redshift &
+exec --no-startup-id nitrogen --restore &
+exec --no-startup-id setxkbmap br-abnt2 &
+exec --no-startup-id dex --autostart --environment i3
+exec --no-startup-id polkit-xfce-authentication-agent-1 &
+exec --no-startup-id xborders --border-radius 7 --border-width 1 &
+exec --no-startup-id polybar --config=~/.config/polybar/config.ini
+
+# ┏━┃┏━┃┏━┃┏━┛┏━┃┏━┃┏┏ ┏━┛
+# ┏━┛┏┏┛┃ ┃┃ ┃┏┏┛┏━┃┃┃┃━━┃
+# ┛  ┛ ┛━━┛━━┛┛ ┛┛ ┛┛┛┛━━┛
+
+bindsym $mod+p exec picom --experimental-backends -b
+bindsym $mod+n exec polybar --config=~/.config/polybar/config.ini
+bindsym $mod+Shift+n exec killall -q polybar
+bindsym $mod+e exec /usr/local/bin/mechvibes.AppImage
+
+bindsym $mod+Shift+w exec --no-startup-id xdotool getactivewindow mousemove --polar 0 30
+
+# 𝐒𝐜𝐫𝐨𝐥𝐥 𝐝𝐨𝐰𝐧 𝐢𝐧 𝐭𝐞𝐫𝐦𝐢𝐧𝐚𝐥
+bindsym $mod+Shift+d exec --no-startup-id xdotool getactivewindow mousemove --polar 0 -30
