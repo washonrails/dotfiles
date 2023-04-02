@@ -1,0 +1,23 @@
+lastupdatecheck: 0
+recentrepos:
+- /home/iamwash/.config
+- /home/iamwash/.config/nvim
+- /home/iamwash/.local/share/nvim/lazy/mpv.nvim
+startuppopupversion: 5
+customcommandshistory:
+- git config --global user.email "iamx.3ur@protonmail.com"
+- git config --global user.name "washonrails"
+- git branch -m main
+- git push
+- git push -u origin main
+- git config --get remote.origin.url
+- git remote add origin https://github.com/washonrails/rust_exercices.git
+- git reset
+- git add mappings.lua
+- git add
+- Aicommits
+- git stash pop
+- git stash apply --index
+- git commit -m "rest"
+- git history
+hidecommandlog: false
