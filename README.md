@@ -194,8 +194,8 @@ So yes... i called the Rices with the names of some of my ex girlfriends.
 
 ### 🌸Karla
 
-|<img src="https://user-images.githubusercontent.com/67278339/221426157-64268f2e-1946-455c-9245-61d0fcfe1cc9.png" alt="Karla Rice" align="center" width="600px">|<img src="https://user-images.githubusercontent.com/67278339/221426162-8477edff-82ec-47e3-9c9f-de98842f581f.png" alt="Karla Rice" align="center" width="600px">|
-|---|---|
+<!-- |<img src="https://user-images.githubusercontent.com/67278339/221426157-64268f2e-1946-455c-9245-61d0fcfe1cc9.png" alt="Karla Rice" align="center" width="600px">|<img src="https://user-images.githubusercontent.com/67278339/221426162-8477edff-82ec-47e3-9c9f-de98842f581f.png" alt="Karla Rice" align="center" width="600px">|
+|---|---| -->
 
 <details>
 <summary><b>Extra wallpapers in Karla</b></summary>
