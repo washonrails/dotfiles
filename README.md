@@ -205,22 +205,22 @@ So yes... i called the Rices with the names of some of my ex girlfriends.
 
 </details>
 
-### 🌸z0mbi3:
+### 🌸washonrails:
 
 |<img src="https://user-images.githubusercontent.com/67278339/221426212-d019956b-08c5-4c09-8375-bb7a377f5024.png" alt="z0mbi3 Rice" align="center" width="600px">|<img src="https://user-images.githubusercontent.com/67278339/221426218-49131fb7-e750-4bee-94a3-f26397760ec8.png" alt="z0mbi3 Rice" align="center" width="600px">|
 |---|---|
 
 <details>
-<summary><b>Extra wallpapers in z0mbi3</b></summary>
+<summary><b>Extra wallpapers in washonrails</b></summary>
 
 |<img src="config/bspwm/rices/z0mbi3/walls/wall-01.webp" alt="z0mbi3 Rice" align="center" width="150px">|<img src="config/bspwm/rices/z0mbi3/walls/wall-02.webp" alt="z0mbi3 Rice" align="center" width="150px">|<img src="config/bspwm/rices/z0mbi3/walls/wall-03.webp" alt="z0mbi3 Rice" align="center" width="150px">|<img src="config/bspwm/rices/z0mbi3/walls/wall-04.webp" alt="z0mbi3 Rice" align="center" width="150px">|
 |---|---|---|---|
 
 </details>
 
-## Neovim themes
+## Hydravim (wash's fork)
 Actually the neovim theme is OneDark, but the background will adapt to the colorscheme in the rice you are. Now is configured in "lua". i wanna keepit simple so there are a few plugins.
-- Lualine
+- Feline
 - Nvim-Tree
 - Colorizer
 - Devicons
@@ -229,8 +229,8 @@ The plugin manager is Packer.
 
 <img src="https://user-images.githubusercontent.com/67278339/221430203-23308e84-c974-4481-8c17-9aab53b37766.gif" alt="Neovim Themes" align="center" width="400px">
 
-## Firefox Theme (z0mbi3 Fox)
-<img src="https://user-images.githubusercontent.com/67278339/228313955-670436db-d502-4249-9817-d67e3de86aa1.png" alt="Firefox theme - z0mbi3-Fox" width="700">
+## Qutebrowser Theme (catpuccin)
+<img src="">
 
 ## Very useful keybindigs to know...
 
@@ -254,18 +254,24 @@ And more.. You need to look sxhkdrc file for more.
 The installer only works for **ARCH** Linux, and based distros.
 
 <b>Open a terminal in HOME</b>
-- **First download the installer**
+- **First backup your configs**
 ```sh
-curl https://raw.githubusercontent.com/gh0stzk/dotfiles/master/RiceInstaller -o $HOME/RiceInstaller
+mv ~/.config/nvim ~/.config/nvim.bak
 ```
-- **Now give it execute permissions**
+
+- **Second clone the repo**
 ```sh
-chmod +x RiceInstaller
+git clone https://github.com/washonrails/dotfiles.git --depth 1 --branch main dotfiles
 ```
+
+- **Third...**
+```sh
+chmod +x ...
+```
+
 - **Finally run the installer**
 ```sh
-./RiceInstaller
-```
+...
 
 
 ## Some tips
@@ -276,10 +282,7 @@ chmod +x RiceInstaller
 
 ## Troubleshooting
 * **Weather module is showing wrong values**
-
-You need to edit ~/.config/bspwm/scripts/Weather in line 12 you need to change the name of your city, you can get it from [openweathermap](https://openweathermap.org/)
-
+...
 
 ## Credits
-- [turquoise-hexagon](https://github.com/turquoise-hexagon/fonts), [adi1090x](https://github.com/adi1090x/widgets), [gabrielzschmitz](https://github.com/gabrielzschmitz), [elenapan](https://github.com/elenapan/dotfiles), [rxyhn](https://github.com/rxyhn/bspdots), [okklol](https://github.com/okklol/eww-bar), [ikz87](https://github.com/ikz87).
-Footer
+- [ gh0stzk/dotfiles ](https://github.com/gh0stzk/dotfiles/)
