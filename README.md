@@ -254,9 +254,10 @@ And more.. You need to look sxhkdrc file for more.
 The installer only works for **ARCH** Linux, and based distros.
 
 <b>Open a terminal in HOME</b>
-- **First backup your configs**
-```sh
-mv ~/.config/nvim ~/.config/nvim.bak
+- **Make sure to backup your configs ! (optional by your own risks dont blame me later mf)**
+```sh/
+mkdir ~/.backup ## Your actual config files will be backuped on ~/.backup folder type cd ~/.backup to see all your config backup
+cp -r ~/.config/* ~/.backup/
 ```
 
 - **Second clone the repo**
