@@ -273,7 +273,7 @@ chmod +x ...
 ```sh
 ...
 
-
+```
 ## Some tips
 
 * The wallpapers are in webp format because I don't want the repository to be too heavy. I Added the packages libwebp and webp-pixbuf-loader to the dependencies in order for your file browser (in my case thunar) to be able to display the thumbnails. However, you can add more wallpapers in the format you want "jpg, png etc..."
