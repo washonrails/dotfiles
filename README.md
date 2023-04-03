@@ -1,4 +1,4 @@
-# I3WM | Dotfiles
+# I3 | Dotfiles
 
 ## 🌿 Information
 12 different themes for BSPWM and Polybar. With a theme selector to change on the fly.
@@ -13,19 +13,18 @@ https://user-images.githubusercontent.com/67278339/211363959-9182ecb7-e56e-4598-
 
 |Distro|[Arch](https://archlinux.org/)|
 |:---:|:---:|
-|WM|[BSPWM](https://github.com/baskerville/bspwm)|
+|WM|[I3](https://github.com/i3/i3)|
 |Bar|[Polybar](https://github.com/polybar/polybar)|
 |Menu|[Rofi](https://github.com/davatorium/rofi)|
 |Compositor|[Picom](https://archlinux.org/packages/community/x86_64/picom/)|
-|Terminal|[Alacritty](https://github.com/alacritty/alacritty)|
+|Terminal|[Kitty](https://github.com/kovidgoyal/kitty)|
 |Widgets|[ElKowars wacky widgets ](https://github.com/elkowar/eww)|
 |Music/Player|[mpd](https://archlinux.org/packages/extra/x86_64/mpd/)-[ncmpcpp](https://archlinux.org/packages/community/x86_64/ncmpcpp/)|
-|File Manager|[Thunar](https://archlinux.org/packages/extra/x86_64/thunar/)|
 |Shell|[Zsh](https://archlinux.org/packages/extra/x86_64/zsh/)|
 
 <br>
 
-## 🚀 Features
+## 🚀 Features Incoming
 <img src="https://user-images.githubusercontent.com/67278339/221426400-6029bdd7-f183-4860-9ade-a5fe35d2251a.png" alt="Rice Menu" align="right" width="400px">
 
 * **Change themes on the fly:** 12 different Rices now!.
