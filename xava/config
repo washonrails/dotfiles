@@ -1,6 +1,18 @@
-## Configuration file for CAVA. Default values are commented out. Use either ';' or '#' for commenting.
+# ██╗  ██╗ █████╗ ██╗   ██╗ █████╗      ██████╗ ██████╗ ███╗   ██╗███████╗██╗ ██████╗ 
+# ╚██╗██╔╝██╔══██╗██║   ██║██╔══██╗    ██╔════╝██╔═══██╗████╗  ██║██╔════╝██║██╔════╝ 
+#  ╚███╔╝ ███████║██║   ██║███████║    ██║     ██║   ██║██╔██╗ ██║█████╗  ██║██║  ███╗
+#  ██╔██╗ ██╔══██║╚██╗ ██╔╝██╔══██║    ██║     ██║   ██║██║╚██╗██║██╔══╝  ██║██║   ██║
+# ██╔╝ ██╗██║  ██║ ╚████╔╝ ██║  ██║    ╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝
+# ╚═╝  ╚═╝╚═╝  ╚═╝  ╚═══╝  ╚═╝  ╚═╝     ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝  by @washonrails <- Github
+# ----
 
-
+# ╔═══╗╔═══╗╔═╗ ╔╗╔═══╗╔═══╗╔═══╗╔╗   
+# ║╔═╗║║╔══╝║║╚╗║║║╔══╝║╔═╗║║╔═╗║║║   
+# ║║ ╚╝║╚══╗║╔╗╚╝║║╚══╗║╚═╝║║║ ║║║║   
+# ║║╔═╗║╔══╝║║╚╗║║║╔══╝║╔╗╔╝║╚═╝║║║ ╔╗
+# ║╚╩═║║╚══╗║║ ║║║║╚══╗║║║╚╗║╔═╗║║╚═╝║
+# ╚═══╝╚═══╝╚╝ ╚═╝╚═══╝╚╝╚═╝╚╝ ╚╝╚═══╝
+# --
 [general]
 
 # Smoothing mode. Can be 'normal', 'scientific' or 'waves'. DEPRECATED as of 0.6.0
@@ -44,7 +56,13 @@
 # only check for input once per second. Cava will wake up once input is detected. 0 = disable.
 ; sleep_timer = 0
 
-
+# ╔══╗╔═╗ ╔╗╔═══╗╔╗ ╔╗╔════╗
+# ╚╣╠╝║║╚╗║║║╔═╗║║║ ║║║╔╗╔╗║
+#  ║║ ║╔╗╚╝║║╚═╝║║║ ║║╚╝║║╚╝
+#  ║║ ║║╚╗║║║╔══╝║║ ║║  ║║
+# ╔╣╠╗║║ ║║║║║   ║╚═╝║ ╔╝╚╗
+# ╚══╝╚╝ ╚═╝╚╝   ╚═══╝ ╚══╝
+# ---
 [input]
 
 # Audio capturing method. Possible methods are: 'pulse', 'alsa', 'fifo', 'sndio' or 'shmem'
@@ -76,7 +94,13 @@
 ; method = portaudio
 ; source = auto
 
-
+# ╔═══╗╔╗ ╔╗╔═══╗╔╗ ╔╗╔════╗
+# ║╔═╗║║║ ║║║╔═╗║║║ ║║║╔╗╔╗║
+# ║║ ║║║║ ║║║╚═╝║║║ ║║╚╝║║╚╝
+# ║║ ║║║║ ║║║╔══╝║║ ║║  ║║  
+# ║╚═╝║║╚═╝║║║   ║╚═╝║ ╔╝╚╗ 
+# ╚═══╝╚═══╝╚╝   ╚═══╝ ╚══╝ 
+# ---
 [output]
 
 # Output method. Can be 'ncurses', 'noncurses', 'raw', 'noritake' or 'sdl'.
@@ -139,8 +163,15 @@
 # enable alacritty synchronized updates. 1 = on, 0 = off
 # removes flickering in alacritty terminal emeulator.
 # defaults to off since the behaviour in other terminal emulators is unknown
-; alacritty_sync = 0
+; alacritty_sync = 0.8
 
+# ╔═══╗╔═══╗╔╗   ╔═══╗╔═══╗╔═══╗
+# ║╔═╗║║╔═╗║║║   ║╔═╗║║╔═╗║║╔═╗║
+# ║║ ╚╝║║ ║║║║   ║║ ║║║╚═╝║║╚══╗
+# ║║ ╔╗║║ ║║║║ ╔╗║║ ║║║╔╗╔╝╚══╗║
+# ║╚═╝║║╚═╝║║╚═╝║║╚═╝║║║║╚╗║╚═╝║
+# ╚═══╝╚═══╝╚═══╝╚═══╝╚╝╚═╝╚═══╝
+# ---
 [color]
 
 # Colors can be one of seven predefined: black, blue, cyan, green, magenta, red, white, yellow.
@@ -169,8 +200,13 @@ gradient_color_6 = '#f5c2e7'
 gradient_color_7 = '#eba0ac'
 gradient_color_8 = '#f38ba8'
 
-
-
+# ╔═══╗╔═╗╔═╗╔═══╗╔═══╗╔════╗╔╗ ╔╗╔══╗╔═╗ ╔╗╔═══╗
+# ║╔═╗║║║╚╝║║║╔═╗║║╔═╗║║╔╗╔╗║║║ ║║╚╣╠╝║║╚╗║║║╔═╗║
+# ║╚══╗║╔╗╔╗║║║ ║║║║ ║║╚╝║║╚╝║╚═╝║ ║║ ║╔╗╚╝║║║ ╚╝
+# ╚══╗║║║║║║║║║ ║║║║ ║║  ║║  ║╔═╗║ ║║ ║║╚╗║║║║╔═╗
+# ║╚═╝║║║║║║║║╚═╝║║╚═╝║ ╔╝╚╗ ║║ ║║╔╣╠╗║║ ║║║║╚╩═║
+# ╚═══╝╚╝╚╝╚╝╚═══╝╚═══╝ ╚══╝ ╚╝ ╚╝╚══╝╚╝ ╚═╝╚═══╝
+# ---
 [smoothing]
 
 # Percentage value for integral smoothing. Takes values from 0 - 100.
@@ -197,7 +233,14 @@ gravity = 100
 # 1 will be very slow and smooth, 0 will be fast but noisy.
 ; noise_reduction = 0.77
 
-
+# ╔═══╗╔═══╗
+# ║╔══╝║╔═╗║
+# ║╚══╗║║ ║║
+# ║╔══╝║║ ║║
+# ║╚══╗║╚═╝║
+# ╚═══╝╚══╗║
+#         ╚╝
+# ---
 [eq]
 
 # This one is tricky. You can have as much keys as you want.
