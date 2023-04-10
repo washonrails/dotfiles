@@ -1,7 +1,7 @@
 # I3WM | Dotfiles
 
 ## 🌿 Information
-12 different themes for I3 and Polybar. With a theme selector to change on the fly.
+different themes for I3 and Polybar. With a theme selector to change on the fly.
 
 ## :book: Wiki
 I already started writing the wiki, you should give it a read. [**Wiki**](https://github.com/gh0stzk/dotfiles/wiki) And you can suggest topics so that you can edit the themes and leave them as you want.
@@ -27,7 +27,7 @@ I already started writing the wiki, you should give it a read. [**Wiki**](https:
 ## 🚀 Features Incoming
 <!-- <img src="https://user-images.githubusercontent.com/67278339/221426400-6029bdd7-f183-4860-9ade-a5fe35d2251a.png" alt="Rice Menu" align="right" width="400px"> -->
 
-* **Change themes on the fly:** 12 different Rices now!.
+* ** --
 
 * **Theme Selector:** <code>Alt + Space bar</code> to launch it.
 
