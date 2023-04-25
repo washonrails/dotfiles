@@ -12,13 +12,6 @@
 set $mod Mod4
 new_window pixel 0
 
-# ┏━┛┏━┃┏━ ━┏┛┏━┛
-# ┏━┛┃ ┃┃ ┃ ┃ ━━┃
-# ┛  ━━┛┛ ┛ ┛ ━━┛
-
-font pango:Fira Code NerdFont 7
-font pango:Fira Code NerdFont 7
-
 # ┏━┛┏━┃┏━ ━┏┛┏━┃┏━┃┃  ┏━┛
 # ┃  ┃ ┃┃ ┃ ┃ ┏┏┛┃ ┃┃  ━━┃
 # ━━┛━━┛┛ ┛ ┛ ┛ ┛━━┛━━┛━━┛
@@ -249,8 +242,11 @@ bindsym $mod+p exec picom --experimental-backends -b
 bindsym $mod+n exec polybar --config=~/.config/polybar/config.ini
 bindsym $mod+Shift+n exec killall -q polybar
 bindsym $mod+e exec /usr/local/bin/mechvibes.AppImage
+bindsym $mod+s exec screenkey -s large --opacity 0.0 -M -p bottom -g 420x250+470+450 --mods-mode emacs -f "JetBrainsMono medium Nerd Font 13" -d
+bindsym $mod+Shift+s exec killall -q screenkey
+bindsym $mod+w exec ~/.local/bin/flemozi.AppImage
+bindsym $mod+b exec obsidian
 
-bindsym $mod+Shift+w exec --no-startup-id xdotool getactivewindow mousemove --polar 0 30
 
 # 𝐒𝐜𝐫𝐨𝐥𝐥 𝐝𝐨𝐰𝐧 𝐢𝐧 𝐭𝐞𝐫𝐦𝐢𝐧𝐚𝐥
 bindsym $mod+Shift+d exec --no-startup-id xdotool getactivewindow mousemove --polar 0 -30
