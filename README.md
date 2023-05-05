@@ -1,7 +1,7 @@
 # I3WM | Dotfiles
 
 ## 🌿 Information
-12 different themes for I3 and Polybar. With a theme selector to change on the fly.
+12 different themes for I3 and Polybar. With a theme selector to change on the fly
 
 ## :book: Wiki
 I already started writing the wiki, you should give it a read. [**Wiki**](https://github.com/gh0stzk/dotfiles/wiki) And you can suggest topics so that you can edit the themes and leave them as you want.
