@@ -1,4 +1,4 @@
-# I3WM | Dotfiles
+# I3WM | Dotfiles 
 
 ## 🌿 Information
 12 different themes for I3 and Polybar. With a theme selector to change on the fly
