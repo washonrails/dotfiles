@@ -60,8 +60,6 @@ Increase and decrease transparency in focused or selected window.
    </tr>
    </table>
 
-## 🎨 The themes...
-
 </details>
 
 ## Hydravim (wash's fork)
