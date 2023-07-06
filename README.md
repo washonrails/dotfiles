@@ -1,7 +1,7 @@
 # ALERT ! THIS DOTFILES IS NO LONGER SUPPORTED , ACTUALLY IM USING HYPRLAND AND NO MORE I3WM
 
 # I3WM | Dotfiles 
-
+ 
 ## 🌿 Information
 12 different themes for I3 and Polybar. With a theme selector to change on the fly
 
